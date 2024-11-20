@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+    
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Galeri Foto</h1>
+            <button id="dark-mode-toggle" class="btn toggle-dark-mode">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    
+    <section class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Selamat Datang di Galeri Super Max</h2>
+            <p class="text-lg mb-8">Koleksi Mobil F1 2024</p>
+        </div>
+    </section>
+
+   
+    <section class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1iQuhD.img?w=1200&h=630&m=4&q=81" alt="foto1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">RB20</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Honda RBPT</p>
+                </div>
+            </div>
+            
+           
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://cdn-9.motorsport.com/images/mgl/2QzqV8WY/s1200/charles-leclerc-ferrari-sf-24.webp" alt="Foto2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">SF24</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Ferrari 066/12</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://cdn.rri.co.id/berita/Takengon/o/1724145471765-Lewis_Hamilton/wcy7b75ydowon3w.jpeg" alt="Foto3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">W15</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Mercedes-AMG F1 M15 E Performance</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/FIA_F1_Austria_2023_Nr._4_%282%29.jpg" alt="Foto4" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">MCL60</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Mercedes-AMG F1 M14 E Performance</p>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2024-02/Visa%20Cash%20App%20RB%20F1%20Team%20022824.jpeg?itok=8tdagv5U" alt="Foto 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">VCARB01</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Honda RBPT</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                <img src="https://www.socios.com/wp-content/uploads/2024/02/AMR24-NewAstonMartinCar.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">AMR24</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Mercedes-AMG F1 M14 E Performance</p>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+   
+    <footer class="bg-blue-600 text-white p-4 mt-10">
+        <div class="container mx-auto text-center">
+            <p>&copy;  2024 Galeri Super Max. All rights reserved.</p>
+        </div>
+    </footer>
+
+ 
+    <script>
+        const toggleDarkMode = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+        toggleDarkMode.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
